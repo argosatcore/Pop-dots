@@ -15,6 +15,9 @@
 " Mapear F4 para entrar y salir de Goyo 
 	nmap <F4> :Goyo <CR>
 
+"Mapear F5 para utilizae vifm de modo que cuando este se abra, lo haga siempre desde el directorio actual.
+	map <F5> :EditVifm .<CR>
+	
 " Remapear las teclas para moverse entre splits de acuerdo con las teclas para moverse en vim (h-j-k-l):
 	nnoremap <C-h> <C-W>h
 	nnoremap <C-j> <C-W>j
@@ -41,9 +44,10 @@
 " Configurar los diccionarios de vim para inglés y español.
 	set spell spelllang=en_us,es  	
 
-" Habilitar autocompletado en la barra de estatus.
+" Habilitar autocompletado en la barra de estatusi con soporte para mouse.
 	set wildmenu
 	set wildmode=longest,list,full
+	set mouse=a
 
 " Resaltar la línea en donde se encuentra posicionado el cursor.
 	set cursorline
@@ -79,6 +83,7 @@
 	Plug 'vim-airline/vim-airline' "Habilita la barra de estado llamada airline.
 	Plug 'vim-airline/vim-airline-themes' "Permite que la barra de estado 'airline' herede la paleta del tema que Vim esté utilizando.
 	Plug 'airblade/vim-gitgutter' "Permite el rastreo de cambios en los archivos que estén vinculados a Github.
+	Plug 'vifm/vifm.vim' "Habilita el uso de Vifm dentro de vim.
 	call plug#end()
 
 	
