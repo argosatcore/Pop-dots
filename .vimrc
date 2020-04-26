@@ -87,4 +87,4 @@
 " Esquema de color, para escoger un tema remueva las comillas de citación del tema a escoger.
 	"colorscheme nord
 	colorscheme gruvbox
-
+"Esto es una prueba de que la transferencia funcionó
