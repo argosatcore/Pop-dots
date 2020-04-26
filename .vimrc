@@ -42,6 +42,7 @@
 	set spell spelllang=en_us,es  	
 
 " Habilitar autocompletado en la barra de estatus.
+	set wildmenu
 	set wildmode=longest,list,full
 
 " Resaltar la línea en donde se encuentra posicionado el cursor.
