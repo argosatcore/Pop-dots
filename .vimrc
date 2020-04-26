@@ -78,7 +78,6 @@
 	Plug 'vim-airline/vim-airline' "Habilita la barra de estado llamada airline.
 	Plug 'vim-airline/vim-airline-themes' "Permite que la barra de estado 'airline' herede la paleta del tema que Vim esté utilizando.
 	Plug 'airblade/vim-gitgutter' "Permite el rastreo de cambios en los archivos que estén vinculados a Github.
-
 	call plug#end()
 
 	
@@ -87,4 +86,3 @@
 " Esquema de color, para escoger un tema remueva las comillas de citación del tema a escoger.
 	"colorscheme nord
 	colorscheme gruvbox
-"Esto es una prueba de que la transferencia funcionó
