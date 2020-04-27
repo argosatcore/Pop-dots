@@ -52,6 +52,13 @@
 " Resaltar la línea en donde se encuentra posicionado el cursor.
 	set cursorline
 
+"Camino para que Vim-LanguageTool encuentre los archivos de LaguageTool (el
+"archivo de stand alone de LanguageTool fue copiado en el directorio del plugin lladmado 'languagetool', el cual podrá ser eliminado en caso de que este plugin falle.)
+	let g:languagetool_jar='/home/argos/.vim/pluged/vim-LanguageTool/languagetool/LanguageTool-4.9/languagetool-commandline.jar'
+
+"Idioma asignado a Vim-LanguageTool
+	let g:languagetool_lang='es'
+
 "Siempre mostrar la columna de signos.
 	"set scl=yes
 
@@ -84,6 +91,7 @@
 	Plug 'vim-airline/vim-airline-themes' "Permite que la barra de estado 'airline' herede la paleta del tema que Vim esté utilizando.
 	Plug 'airblade/vim-gitgutter' "Permite el rastreo de cambios en los archivos que estén vinculados a Github.
 	Plug 'vifm/vifm.vim' "Habilita el uso de Vifm dentro de vim.
+	Plug 'dpelle/vim-LanguageTool' "Habilita el uso de Language Tool para hacer revisiones gramaticales en Vim. 
 	call plug#end()
 
 	
