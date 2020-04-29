@@ -9,13 +9,13 @@
 " Mapear leader + F3 para poner y quitar los números de líneas relativos.
 	"nmap <leader><F3> :set rnu! <CR>
 
-" Mapaer jj para ser utilizada como 'Esc'
+" Mapaer 'ff' para ser utilizada como 'Esc'. Esto permite el salir del modo 'Insert' para entrar en el modo 'Normal'.
 	imap ff <Esc>
 
 " Mapear F4 para entrar y salir de Goyo 
 	nmap <F4> :Goyo <CR>
 
-"Mapear F5 para utilizae vifm de modo que cuando este se abra, lo haga siempre desde el directorio actual.
+"Mapear F5 para utilizar vifm de modo que cuando este se abra, lo haga siempre desde el directorio actual.
 	map <F5> :EditVifm .<CR>
 	
 " Remapear las teclas para moverse entre splits de acuerdo con las teclas para moverse en vim (h-j-k-l):
@@ -44,42 +44,28 @@
 " Configurar los diccionarios de vim para inglés y español.
 	set spell spelllang=en_us,es  	
 
-" Habilitar autocompletado en la barra de estatusi con soporte para mouse.
+" Habilitar autocompletado en la barra de estado.
 	set wildmenu
 	set wildmode=longest,list,full
+
+"Soporte para mouse en Vim.
 	set mouse=a
 
 " Resaltar la línea en donde se encuentra posicionado el cursor.
 	set cursorline
 
 "Camino para que Vim-LanguageTool encuentre los archivos de LaguageTool (el
-"archivo de stand alone de LanguageTool fue copiado en el directorio del plugin lladmado 'languagetool', el cual podrá ser eliminado en caso de que este plugin falle.)
+"archivo de stand alone de LanguageTool fue copiado en el directorio del plug-in llamado 'languagetool', el cual podrá ser eliminado en caso de que este plugin falle.)
 	let g:languagetool_jar='/home/argos/.vim/pluged/vim-LanguageTool/languagetool/LanguageTool-4.9/languagetool-commandline.jar'
 
 "Idioma asignado a Vim-LanguageTool
 	let g:languagetool_lang='es'
 
-"Siempre mostrar la columna de signos.
-	"set scl=yes
-
-" Detectar la sintaxis de un documento.
+" Detectar la sintaxis de un determinado tipo de documento, indicado en la extensión del archivo mismo.
 	syntax on 
 
-" Configuración para mostrar determinados parámetros en la barra de estado.
-	"set statusline=
-	"set statusline+=\ %M
-	"set statusline+=\ %y
-	"set statusline+=\ %r
-	"set statusline+=\ %F 
 
-" Configuraciones en el lado derecho de la pantalla en la barra de estado.
-	"set statusline+=\%=
-	"set statusline+=\ %c:%l/%L
-	"set statusline+=\ %p%%
-	"set statusline+=\ [%n]
-	
-
-" -------PLUG-INS: Experimento para la instalación de plug-ins con vim-plug: 
+" -------Plug-ins: 
 
 " Lista de plug-ins.
 	call plug#begin(expand('~/.vim/pluged'))
