@@ -9,8 +9,9 @@
 " Mapear leader + F3 para poner y quitar los números de líneas relativos.
 	"nmap <leader><F3> :set rnu! <CR>
 
-" Mapaer 'ff' para ser utilizada como 'Esc'. Esto permite el salir del modo 'Insert' para entrar en el modo 'Normal'.
+" Mapaer 'ff' para ser utilizada como 'Esc'. Esto permite el salir de los modos 'Insert' y 'Visual'  para entrar en el modo 'Normal'.
 	imap ff <Esc>
+	vmap ff <Esc> 
 
 " Mapear F4 para entrar y salir de Goyo 
 	nmap <F4> :Goyo <CR>
