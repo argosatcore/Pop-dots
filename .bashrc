@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;30m\][\[\033[01;36m\]\u\[\033[32m\]@\[\033[33m\]\h\[\033[31m\]:\[\033[01;34m\]\w\[\033[1;30m\]]\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;30m\][\[\033[01;36m\]\u\[\033[32m\]@\[\033[33m\]\h\[\033[31m\]:\[\033[01;34m\]\w\[\033[1;30m\]]\[\033[00m\]ꙮ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -116,7 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#Tilix fix on the location of the vte.sh
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte-2.91.sh
-fi
+

@@ -1,5 +1,5 @@
 	" Archivo de configuración en Vim | Carlos Aguilar Salazar
-" Estimado Lector: Este archivo de configuración para el editor de texto conocido como Vim es liberado al dominio público para ser modificado según su conveniencia. Aunque me adjudiqué la autoría de este documento, debo confesar que esto es, en parte, una mentira. Si bien el acomodo, la inclusión -y la exclusión- de ciertos parámetros de configuración es artificio mío, el conocimiento necesario para lograr armar este documento fue tomado de otros escritores que, ahora como yo, decidieron, de manera desinteresada, el poner a la disposición de otros parte del bagaje acumulado en el tiempo en relación con este singular programa. 
+" Estimado Lector: Este archivo de configuración para el editor de texto conocido como Vim es liberado al dominio público para ser modificado según su conveniencia. Aunque me adjudiqué la autoría de este documento, debo confesar que esto es, en parte, una mentira. Si bien el acomodo, la inclusión -y la exclusión- de ciertos parámetros de configuración es artificio mío, el conocimiento necesario para lograr armar este documento fue tomado de otros escritores que, ahora como yo, decidieron, de manera desinteresada, el poner a la disposición de otros parte del bagaje acumulado en el tiempo en relación con este singular programa. Espero que les sea tan provechoso como lo ha sido conmigo, sino es que más. 
 
 " -------Atajos del teclado:
 
@@ -25,7 +25,7 @@
 	nnoremap <C-k> <C-W>k
 	nnoremap <C-l> <C-W>l  
 
-" Remapeo de los comandos para copiar y pegar. Gracias a la instalación de gvim (mediante el comado 'apt install vim-gtk' en distribuciones derivadas de Debian), ahora Vim tiene acceso al clipboard del sistema, habilitando el copiado y pegado de texto entre Vim y las distintas aplicaciones del sistema operativo. Cabe mencionar que, desde que se instaló este último programa, se hizo presente un bug con el esquema de color 'gruvbox': el tema claro se instauró como el default y no permite se sobreescrito con otro tema. Sin embargo, este bug parece ser válido sólo para Vim, ya que al utilizar a otra de sus encarnaciones, NeoVim, la paleta oscura de gruvbox funciona sin problema.
+" Remapeo de los comandos para copiar y pegar. Gracias a la instalación de gvim (mediante el comando 'apt install vim-gtk' en distribuciones derivadas de Debian), ahora Vim tiene acceso al clipboard del sistema, habilitando el copiado y pegado de texto entre Vim y las distintas aplicaciones del sistema operativo. Cabe mencionar que, desde que se instaló este último programa, se hizo presente un bug con el esquema de color 'gruvbox': el tema claro se instauró como el default y no permite se sobreescrito con otro tema. Sin embargo, este bug parece ser válido sólo para Vim, ya que al utilizar a otra de sus encarnaciones, NeoVim, la paleta oscura de gruvbox funciona sin problema.
 	vnoremap <C-c> "+y
 	map <C-v> "+P
 
@@ -47,7 +47,7 @@
 
 " Habilitar autocompletado en la barra de estado.
 	set wildmenu
-	set wildmode=longest,list,full
+	set autoread wildmode=longest,list,full
 
 "Soporte para mouse en Vim.
 	set mouse=a
@@ -87,3 +87,4 @@
 " Esquema de color, para escoger un tema remueva las comillas de citación del tema a escoger.
 	"colorscheme nord
 	colorscheme gruvbox
+	set background=dark
