@@ -3,12 +3,6 @@
 
 " -------Atajos del teclado:
 
-" Mapear F3 para poner y quitar los números de líneas.
-	"nmap <F3> :set nu! <CR>
-
-" Mapear leader + F3 para poner y quitar los números de líneas relativos.
-	"nmap <leader><F3> :set rnu! <CR>
-
 " Mapaer 'ff' para ser utilizada como 'Esc'. Esto permite el salir de los modos 'Insert' y 'Visual'  para entrar en el modo 'Normal'.
 	imap ff <Esc>
 	vmap ff <Esc> 
@@ -55,13 +49,6 @@
 " Resaltar la línea en donde se encuentra posicionado el cursor.
 	set cursorline
 
-"Camino para que Vim-LanguageTool encuentre los archivos de LaguageTool (el
-"archivo de stand alone de LanguageTool fue copiado en el directorio del plug-in llamado 'languagetool', el cual podrá ser eliminado en caso de que este plugin falle.)
-	let g:languagetool_jar='/home/argos/.vim/pluged/vim-LanguageTool/languagetool/LanguageTool-4.9/languagetool-commandline.jar'
-
-"Idioma asignado a Vim-LanguageTool
-	let g:languagetool_lang='es'
-
 " Detectar la sintaxis de un determinado tipo de documento, indicado en la extensión del archivo mismo.
 	syntax on 
 
@@ -73,12 +60,11 @@
 	Plug 'arcticicestudio/nord-vim' "Instala y habilita el uso de la paleta 'nord' como tema de Vim.
 	Plug 'morhetz/gruvbox' "Instala y habilita el uso de la paleta 'gruvbox' como tema de Vim. 
 	Plug 'junegunn/goyo.vim' "Da un formato más legible y libre de distracciones para escribir en Vim.
-	Plug 'lervag/vimtex' "Incrementa la compatibilidad entre Vim y LaTeX. Además incluye un set de herramientas útiles para escribir documentos en LaTeX.
+	Plug 'lervag/vimtex' "Incrementa la compatibilidad entre Vim y LaTeX. Además incluye un set de herramientas útiles para escribir y compilar documentos en LaTeX.
 	Plug 'vim-airline/vim-airline' "Habilita la barra de estado llamada airline.
 	Plug 'vim-airline/vim-airline-themes' "Permite que la barra de estado 'airline' herede la paleta del tema que Vim esté utilizando.
 	Plug 'airblade/vim-gitgutter' "Permite el rastreo de cambios en los archivos que estén vinculados a Github.
 	Plug 'vifm/vifm.vim' "Habilita el uso de Vifm dentro de vim.
-	Plug 'dpelle/vim-LanguageTool' "Habilita el uso de Language Tool para hacer revisiones gramaticales en Vim. 
 	call plug#end()
 
 	
@@ -88,3 +74,7 @@
 	"colorscheme nord
 	colorscheme gruvbox
 	set background=dark
+
+"Tema usado en airline:
+	let g:airline_theme='base16_gruvbox_dark_hard'
+	
