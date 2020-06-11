@@ -58,14 +58,17 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}';
-    PS1+='\[\033[01;36m\]⎨';
-    PS1+='\[\033[01;34m\]\u';
-    PS1+='\[\033[01;35m\]⌘';
+    PS1+='\[\033[01;00m\]⊰';
+    PS1+='\[\033[01;32m\]⎨';
+    PS1+='\[\033[01;36m\]\u';
+    PS1+='\[\033[01;33m\]⌘';
     PS1+='\[\033[01;31m\]\h';
-    PS1+='\[\033[01;33m\]§';
-    PS1+='\[\033[01;32m\]\w';
-    PS1+='\[\033[01;36m\]⎬';
-    PS1+='\[\033[01;00m\] ꙮ ⤐  '
+    PS1+='\[\033[01;35m\]§';
+    PS1+='\[\033[01;34m\]\w';
+    PS1+='\[\033[01;32m\]⎬';
+    PS1+='\[\033[01;00m\]⊱';
+    PS1+='\[\033[01;00m\]ꙮ ';
+    PS1+='\[\033[01;37m\]⪼  ';
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -124,4 +127,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+# Activate vi mode to get vim-like commands in the bash prompt with ESC
+set -o vi
