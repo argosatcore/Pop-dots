@@ -21,7 +21,7 @@
 
 " Remapeo de los comandos para copiar y pegar. Gracias a la instalación de gvim (mediante el comando 'apt install vim-gtk' en distribuciones derivadas de Debian), ahora Vim tiene acceso al clipboard del sistema, habilitando el copiado y pegado de texto entre Vim y las distintas aplicaciones del sistema operativo. Cabe mencionar que, desde que se instaló este último programa, se hizo presente un bug con el esquema de color 'gruvbox': el tema claro se instauró como el default y no permite se sobreescrito con otro tema. Sin embargo, este bug parece ser válido sólo para Vim, ya que al utilizar a otra de sus encarnaciones, NeoVim, la paleta oscura de gruvbox funciona sin problema.
 	vnoremap <C-c> "+y
-	map <C-v> "+P
+	map <C-p> "+P
 
 "Para copiar tanto en el clipboard y en la selección primaria.
 	vnoremap <C-c> "*y :let @+=@*<CR>
@@ -77,4 +77,7 @@
 
 "Tema usado en airline:
 	let g:airline_theme='base16_gruvbox_dark_hard'
+	"let g:airline_theme='base16_nord'
+
+
 	
