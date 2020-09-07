@@ -72,7 +72,9 @@ if [ "$color_prompt" = yes ]; then
  
    PS1+='\[\033[01;00m\]ꙮ ';
    PS1+='\[\033[01;36m\]\w';
-   PS1+='\[\033[01;00m\]⪼  ';
+   PS1+='\[\033[01;00m\]§ ';
+
+   #PS1+='\[\033[01;00m\]⪼  ';
 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -81,7 +83,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|urxvt*|rxvt-unicode*|rxvtunicode*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -132,5 +134,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Activate vi mode to get vim-like commands in the bash prompt with ESC
-set -o vi
+
+# Pull up vim's .vimrc.
+alias vrc='nvim .vimrc'
+
+# Pull up bash's .bashrc.
+alias brc='nvim .bashrc'
+
+# Use Nvim
+alias v='nvim'
+
+# Transform terminal into a finder.
+alias f='xdg-open $(fzf); exit'
+
+# Pull up .Xdefaults
+alias xd='nvim .Xdefaults'
+
