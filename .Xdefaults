@@ -7,6 +7,8 @@ URxvt's configuration:
 	*.foreground:  #ebdbb2
 	*.background:  #1d2021
 	*.cursorColor:  #ebdbb2
+	*.highlightColor:  #fb4934
+	
 	! black
 	*.color0:      #1d2021
 	*.color8:      #928374
@@ -39,15 +41,15 @@ URxvt's configuration:
 	URxvt.background: [90]#14161C
 
 !Cursor
-	URxvt.cursorBlink:	 true 
+URxvt.cursorBlink: true 
 
 !Scrollbar
 	URxvt*scrollBar:         false
 	URxvt*scrollBar_right:   false
 	
 !Fonts:
-!	URxvt.font: xft:Fira Code Retina:pixelsize=17
-	URxvt.font: xft:SauceCodePro Nerd Font Mono:pixelsize=17
+	URxvt.font: xft:Fira Code Retina:pixelsize=17
+!	URxvt.font: xft:SauceCodePro Nerd Font Mono:pixelsize=17
 !	URxvt.font: xft:Monospace:pixelsize=18
 !	URxvt.font: xft:Inconsolata:pixelsize=17
 
