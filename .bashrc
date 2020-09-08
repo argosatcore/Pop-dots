@@ -70,9 +70,11 @@ if [ "$color_prompt" = yes ]; then
    # PS1+='\[\033[01;00m\]ꙮ ';
    # PS1+='\[\033[01;00m\]⪼  ';
  
-   PS1+='\[\033[01;00m\]ꙮ ';
+   # PS1+='\[\033[01;00m\]ꙮ ';
+   PS1+='\[\033[00;00m\]['; 
    PS1+='\[\033[01;36m\]\w';
-   PS1+='\[\033[01;00m\]§ ';
+   PS1+='\[\033[00;00m\]]';
+   PS1+='\[\033[00;00m\]§ ';
 
    #PS1+='\[\033[01;00m\]⪼  ';
 
@@ -136,10 +138,10 @@ fi
 
 
 # Pull up vim's .vimrc.
-alias vrc='nvim .vimrc'
+alias vrc='nvim /home/argos/.vimrc'
 
 # Pull up bash's .bashrc.
-alias brc='nvim .bashrc'
+alias brc='nvim /home/argos/.bashrc'
 
 # Use Nvim
 alias v='nvim'
@@ -148,5 +150,7 @@ alias v='nvim'
 alias f='xdg-open $(fzf); exit'
 
 # Pull up .Xdefaults
-alias xd='nvim .Xdefaults'
+alias xd='nvim /home/argos/.Xdefaults'
 
+# Vim mode
+set -o vi 

@@ -1,69 +1,85 @@
 URxvt's configuration:
 
 !Locale:
-	URxvt*imLocale: en_US.UTF-8
+	URxvt*imLocale:		en_US.UTF-8
+
+!! URxvt Appearance
+	URxvt.geometry: 	85x25
+	URxvt.internalBorder: 	12 
+	URxvt.cursorBlink: 	true
+	URxvt.cursorUnderline: 	false
+	URxvt.saveline: 	2048
+	URxvt.urgentOnBell: 	true
+	URxvt.iso14755: 	false
 
 ! Color palette:
-	*.foreground:  #ebdbb2
-	*.background:  #1d2021
-	*.cursorColor:  #ebdbb2
-	*.highlightColor:  #fb4934
+	*.foreground:  		#ebdbb2
+	*.background: 		#1d2021
+	*.cursorColor:  	#ebdbb2
+	*.highlightColor:  	#fb4934
 	
 	! black
-	*.color0:      #1d2021
-	*.color8:      #928374
+	*.color0:      		#1d2021
+	*.color8:      		#928374
 	! red
-	*.color1:      #cc241d
-	*.color9:      #fb4934
+	*.color1:      		#cc241d
+	*.color9:      		#fb4934
 	! green
-	*.color2:      #98971a
-	*.color10:     #b8bb26
+	*.color2:      		#98971a
+	*.color10:     		#b8bb26
 	! yellow
-	*.color3:      #d79921
-	*.color11:     #fabd2f
+	*.color3:      		#d79921
+	*.color11:     		#fabd2f
 	! blue
-	*.color4:      #458588
-	*.color12:     #83a598
+	*.color4:      		#458588
+	*.color12:    		#83a598
 	! magenta
-	*.color5:      #b161286
-	*.color13:     #d3869b
+	*.color5:		#b161286
+	*.color13:		#d3869b
 	! cyan
-	*.color6:      #689d6a
-	*.color14:     #8ec07c
+	*.color6:		#689d6a
+	*.color14:		#8ec07c
 	! white
-	*.color7:      #a89984
-	*.color15:     #ebdbb2
+	*.color7:		#a89984
+	*.color15:		#ebdbb2
 
 !Transparency
-	URxvt*transparent:       false
+	URxvt*transparent:      false
 	
-	URxvt*depth: 32
-	URxvt.background: [90]#14161C
-
-!Cursor
-URxvt.cursorBlink: true 
+	URxvt*depth:		32
+	URxvt.background: 	[95]#1d2021
 
 !Scrollbar
-	URxvt*scrollBar:         false
-	URxvt*scrollBar_right:   false
+	URxvt*scrollBar:	false
+	URxvt*scrollBar_right:	false
 	
 !Fonts:
-	URxvt.font: xft:Fira Code Retina:pixelsize=17
-!	URxvt.font: xft:SauceCodePro Nerd Font Mono:pixelsize=17
-!	URxvt.font: xft:Monospace:pixelsize=18
-!	URxvt.font: xft:Inconsolata:pixelsize=17
+	URxvt.intensity.Styles:	false
+!	URxvt.font: 		xft:Fira Code Retina:pixelsize=17
+!	URxvt.font: 		xft:SauceCodePro Nerd Font Mono:size=12
+!	URxvt.font: 		xft:Inconsolata:size=13
+!	URxvt.font: 		xft:Dejavu Sans Mono:size=13
+	URxvt.font: 		xft:Monospace:size=13
+	
+	URxvt.letterSpace: 	0 
+	URxvt.lineSpace: 	1
 
-	
-	URxvt.letterSpace: -4
-	
-	*antialias:  true
-	*autohint:   true
-	Xft.antialias:	1
-	Xft.hinting:	1
-	Xft.autohint:	0
-	Xft.hintstyle:	hintslight
-	Xft.rgba:	rgb
-	Xft.lcdfilter:	lcddefault
+	*antialias:  		true
+	*autohint:   		true
+	Xft.antialias:		1
+	Xft.hinting:		1
+	Xft.autohint:		0
+	Xft.hintstyle:		hintslight
+	Xft.rgba:		rgb
+	Xft.lcdfilter:		lcddefault
+
+! Common Keybinds for Navigations
+	URxvt.keysym.Shift-Up: 	command:\033]720;1\007
+	URxvt.keysym.Shift-Down: command:\033]721;1\007
+	URxvt.keysym.Control-Up: \033[1;5A
+	URxvt.keysym.Control-Down: \033[1;5B
+	URxvt.keysym.Control-Right: \033[1;5C
+	URxvt.keysym.Control-Left: \033[1;5D
 
 !Perl Extensions:
 	URxvt.perl-ext-common: default,matcher
@@ -81,4 +97,6 @@ URxvt.cursorBlink: true
 ! 	URxvt.tabbed.tabbar-bg: 0
 ! 	URxvt.tabbed.tab-fg: 3
 ! 	URxvt.tabbed.tab-bg: 2
+!
+
 
