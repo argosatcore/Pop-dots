@@ -162,17 +162,33 @@
 	# Transform terminal into a launcher:
 	alias f='xdg-open $(fzf); exit'
 
-	# Pull up .Xdefaults:
-	alias xd='nvim /home/argos/.Xdefaults'
-
 	#Tmux:
 	alias t='tmux'
+
+	#Watch sensors
+	alias ws='watch sensors'
+
+	#Htop
+	alias ht='htop'
 
 	#NNN:
 	alias n='nnn'
 	
-	#Clear Terminal
+	#Clear Terminal:
 	alias c='clear'
+
+	#Fetch updates:
+	alias aptdate='sudo apt update'
+
+	#Show upgradable packages:
+	alias aptgradable='apt list --upgradable'
+
+	#Upgrade packages:
+	alias aptgrade='sudo apt upgrade'
+
+	#Search for a package:
+	alias lookapt='apt search'
+
 
 # Vim mode:
 	set -o vi 
