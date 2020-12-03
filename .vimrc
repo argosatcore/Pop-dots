@@ -53,11 +53,11 @@
 	set mouse=a
 
 " Resaltar la línea en donde se encuentra posicionado el cursor.
-	set background=dark cursorline termguicolors
-"	highlight! link CursorLine Visual
-"	highlight! link CursorColumn Visual
-"	highlight! link Cursor Visual
-
+"	set background=dark cursorline termguicolors
+	highlight! link CursorLine Visual
+	highlight! link CursorColumn Visual
+	highlight! link Cursor Visual
+	set cursorline
 " Detectar la sintaxis de un determinado tipo de documento, indicado en la extensión del archivo mismo.
 	syntax on 
 
@@ -80,17 +80,17 @@
 " -------Apariencia visual de Vim:
 
 " Esquema de color, para escoger un tema remueva las comillas de citación del tema a escoger.
-	"colorscheme nord
+	colorscheme nord
 	
 	
 	" Gruvbox
-		let g:gruvbox_contrast_dark = 'hard'
-		let g:gruvbox_bold = '1'
-		let g:gruvbox_italic = '1'
-		let g:gruvbox_underline = '1'
-		let g:gruvbox_undercurl = '1'
-		let g:gruvbox_termcolor = '256'
-		colorscheme gruvbox 
+	"	let g:gruvbox_contrast_dark = 'hard'
+	"	let g:gruvbox_bold = '1'
+	"	let g:gruvbox_italic = '1'
+	"	let g:gruvbox_underline = '1'
+	"	let g:gruvbox_undercurl = '1'
+	"	let g:gruvbox_termcolor = '256'
+	"	colorscheme gruvbox 
 
 	" Cambiar esquema de color
 		map <F1> :colorscheme gruvbox<CR>
@@ -101,9 +101,9 @@
 "	highlight Visual term=reverse cterm=reverse ctermbg=Black ctermfg=NONE guibg=NONE guifg=NONE gui=reverse 
 
 "Tema usado en airline:
-	let g:airline_theme='base16_gruvbox_dark_hard'
+"	let g:airline_theme='base16_gruvbox_dark_hard'
 "	let g:airline_theme='base16_nord'
-"	let g:airline_theme='monochrome'
+	let g:airline_theme='monochrome'
 
 " Configuración de Goyo 
 	function! s:goyo_enter()

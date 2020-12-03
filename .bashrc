@@ -18,7 +18,7 @@
 	export EDITOR="nvim"
 	export PAGER="less"
 	export MANPAGER='nvim +Man!'
-	export TERMINAL='urxvt'
+	export TERMINAL="xterm-256"
 
 # If not running interactively, don't do anything
 	case $- in
@@ -188,6 +188,12 @@
 
 	#Search for a package:
 	alias lookapt='apt search'
+
+	#Install a package:
+	alias capture='sudo apt install'
+
+	#Remove a package
+	alias throwapt='sudo apt remove'
 
 
 # Vim mode:
