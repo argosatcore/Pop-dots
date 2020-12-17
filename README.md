@@ -1,13 +1,4 @@
-# Pop!_Dots                                           
-
- __h____""""""""                                     
--"\   _ \""""""""__"""""""""                            
---"\ \ \ \""""""/ /""""""""                    
----"\ \_\ \""""/ /"""""""""                     
-----"\  ___\""/_/""""""""""                     
------"\ \""""_"""""""""""""                               
-----"__\_\__(_)_""""""""""""                         
----"(___________)`"""""""""                                        
+# Pop!_Dots                                                                                
 
 Just a backup of my dotfiles in order to be able to set some of my preferred configurations when working on another machine.
  **BASH & Vim Config** | **Desktop Config**
