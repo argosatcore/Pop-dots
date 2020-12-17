@@ -1,13 +1,13 @@
 # Pop!_Dots                                           
 
-- ______              
-- \   _ \        __   
--  \ \ \ \      / /   
--   \ \_\ \    / /    
--    \  ___\  /_/     
--     \ \    _       
--    __\_\__(_)_      
--   (___________)`
+ ______              
+ \   _ \        __   
+  \ \ \ \      / /   
+   \ \_\ \    / /    
+    \  ___\  /_/     
+     \ \    _       
+    __\_\__(_)_      
+   (___________)`
 
 Just a backup of my dotfiles in order to be able to set some of my preferred configurations when working on another machine.
  **BASH & Vim Config** | **Desktop Config**
