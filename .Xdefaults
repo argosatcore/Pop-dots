@@ -4,15 +4,15 @@ URxvt's configuration:
 	URxvt*imLocale:		en_US.UTF-8
 
 !! URxvt Appearance
-	URxvt.geometry: 	85x25
+	URxvt.geometry: 	87x23
 	URxvt.internalBorder: 	11
+	URxvt.externalBorder: 	11
 	URxvt.cursorBlink: 	true
 	URxvt.cursorUnderline: 	false
-!	URxvt.saveline: 	2048
+	URxvt.saveLines: 	10000
 	URxvt.urgentOnBell: 	true
 	URxvt.iso14755: 	false
-
-!Detect 256 colors
+	URxvt.thickness: 0
 	URxvt.termName: rxvt-unicode-256color
 
 
@@ -46,43 +46,77 @@ URxvt's configuration:
 !!		*.color7:     	#a89984
 !!		*.color15:    	#ebdbb2
 		
-!! Color palette Nord
-	*.foreground:  		#D8DEE9
-	*.background:  		#2E3440
-	*.cursorColor: 		#D8DEE9
-	*.highlightColor:	#8fbcbb
-	*fading: 35
+!!!! Color palette Nord
+!!	*.foreground:  		#D8DEE9
+!!	*.background:  		#2E3440
+!!	*.cursorColor: 		#D8DEE9
+!!	*.highlightColor:       #48B9C7
+!!	*fading: 35
+!!
+!!	! black
+!!  		*.color0:      	#3B4252
+!!   		*.color8:      	#4C566A
+!!	! red
+!!		*.color1:      	#BF616A
+!!		*.color9:      	#BF616A
+!!	! green
+!!		*.color2:      	#A3BE8C
+!!		*.color10:     	#A3BE8C
+!!	! yellow
+!!		*.color3:      	#EBCB8B
+!!		*.color11:     	#EBCB8B
+!!	! blue
+!!		*.color4:      	#81A1C1
+!!		*.color12:     	#81A1C1
+!!	! magenta
+!!		*.color5:     	#B48EAD
+!!		*.color13:     	#ECEFF4
+!!	! cyan
+!!		*.color6:    	#88C0D0
+!!		*.color14:    	#8FBCBB
+!!	! white
+!!		*.color7:     	#E5E9F0
+!!		*.color15:    	#ECEFF4
+!! Manet Color Palette:
+!
+	*.foreground:  		#C5C9B2
+	*.background:  		#191919
+	*.cursorColor: 		#C5C9B2
+!!	*.highlightColor:	#8fbcbb
+	*fading: 45
+
 
 	! black
-  		*.color0:      	#3B4252
-   		*.color8:      	#4C566A
+  		*.color0:      	#191919
+   		*.color8:      	#6C6E63
 	! red
-		*.color1:      	#BF616A
-		*.color9:      	#BF616A
+		*.color1:      	#B92A38
+		*.color9:      	#D97A67
 	! green
-		*.color2:      	#A3BE8C
-		*.color10:     	#A3BE8C
+		*.color2:      	#569F66
+		*.color10:     	#98C552
 	! yellow
-		*.color3:      	#EBCB8B
-		*.color11:     	#EBCB8B
+		*.color3:      	#D1BE7C
+		*.color11:     	#FFEE87
 	! blue
-		*.color4:      	#81A1C1
-		*.color12:     	#81A1C1
+		*.color4:      	#4885BE
+		*.color12:     	#7CA3C0
+
 	! magenta
-		*.color5:     	#B48EAD
-		*.color13:     	#ECEFF4
+		*.color5:     	#7164AD
+		*.color13:     	#7C77AB
 	! cyan
-		*.color6:    	#88C0D0
-		*.color14:    	#8FBCBB
+		*.color6:    	#309798
+		*.color14:    	#78ADAF
 	! white
-		*.color7:     	#E5E9F0
-		*.color15:    	#ECEFF4
+		*.color7:     	#C5C9B2
+		*.color15:    	#DEE0D5
 		
 !Transparency
 	URxvt*transparent:      false
 	
 	URxvt*depth:		32
-	URxvt.background: 	[90]#101010
+	URxvt.background: 	[75]#202020
 
 !Scrollbar
 	URxvt*scrollBar:	false
@@ -93,7 +127,8 @@ URxvt's configuration:
 !	URxvt.font: 		xft:Fira Code Retina:pixelsize=17
 !	URxvt.font: 		xft:SauceCodePro Nerd Font Mono:size=14
 !	URxvt.font: 		xft:Inconsolata:size=13
-	URxvt.font: 		xft:Hack:size=13
+!	URxvt.font: 		xft:Hack:size=13
+	URxvt.font: xft:Hack:size=13:hinting=none:style=Regular
 !	URxvt.font: 		xft:Monospace:size=13
 	
 	URxvt.letterSpace: 	0 
@@ -101,11 +136,12 @@ URxvt's configuration:
 
 	*antialias:  		true
 	*autohint:   		true
-!	Xft.antialias:		1
-!	Xft.hinting:		1
+	Xft.antialias:		true
+	Xft.hinting:		true
+	Xft.hintstyle: 		hintnone
 !	Xft.autohint:		0
 !	Xft.hintstyle:		hintslight
-!	Xft.rgba:		rgb
+	Xft.rgba:		rgb
 !	Xft.lcdfilter:		lcddefault
 
 ! Common Keybinds for Navigations
@@ -134,4 +170,7 @@ URxvt's configuration:
 ! 	URxvt.tabbed.tab-bg: 2
 !
 
-
+URxvt.keysym.C-minus: font-size:decrease
+URxvt.keysym.C-plus:  font-size:increase
+URxvt.keysym.C-equal: font-size:show
+URxvt.font-size.step: 2
