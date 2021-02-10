@@ -4,4 +4,4 @@ Just a backup of my dotfiles in order to be able to set some of my preferred con
 
 ---
 
-![Screenshot from 2021-01-07 02-51-57](https://user-images.githubusercontent.com/64110504/103929134-71fa6b80-50e2-11eb-980f-499c0ab94309.png)
+![Screenshot from 2021-02-09 19-19-27](https://user-images.githubusercontent.com/64110504/107451420-d909a680-6b0c-11eb-952f-3b8f3f570a66.png)
