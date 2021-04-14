@@ -223,3 +223,16 @@ git commit -m "Update."
 
 brc
 lookapt bash-completion
+git add Popstrap/popstrap.sh 
+git commit -m "Added boostrapping script."
+git push -u origin main
+git push -u origin master 
+git config --global --edit
+git config --amend --reset-author
+git commit --amend --reset-author
+git push -u origin master 
+git add -u
+git commit -m "Update"
+git push -u origin master
+git pull
+git push -u origin master
