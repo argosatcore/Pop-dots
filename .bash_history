@@ -217,3 +217,9 @@ git push -u origin main
 git clone https://github.com/argosatcore/Pop_Dots.git
 git push -u origin main
 git push -u origin master
+brc
+git add -u
+git commit -m "Update."
+
+brc
+lookapt bash-completion
