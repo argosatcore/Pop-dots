@@ -87,9 +87,7 @@
 		PS1+='\[\033[01;97m\]['; 
 		PS1+='\[\033[01;96m\]\w';
 		PS1+='\[\033[01;97m\]]';
-		PS1+='\[\033[00;91m\]⨕ ';
-		PS1+='\[\033[00;00m\]';
-	
+		PS1+='\[\033[00;00m\]: ';
 	else
 	    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	fi
@@ -201,6 +199,11 @@
 	bind 'set show-mode-in-prompt on'
 	bind 'set vi-ins-mode-string +'
 	bind 'set vi-cmd-mode-string -'
+	bind -m vi-insert "\C-l":clear-screen
+	bind -m vi-insert "\C-e":end-of-line
+	bind -m vi-insert "\C-a":beginning-of-line
+	bind -m vi-insert "\C-h":backward-kill-word
+	bind -m vi-insert "\C-k":kill-line
 
 # Turn off bell
 	set bell-style none
