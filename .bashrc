@@ -38,6 +38,7 @@
 	alias ws='watch sensors'
 	alias n='nnn'
 	alias c='clear'
+	alias fp='ps aux | fzf'
 
 	#Apt:
 	alias aptdate='sudo apt update'
@@ -46,7 +47,8 @@
 	alias lookapt='apt search'
 	alias throwapt='sudo apt remove'
 	alias capture='sudo apt install'
-	alias debcount='dpkg -S . | wc -l'
+	alias debcount='apt-cache search "" | wc -l'
+	alias debcrawler='apt-cache search "" | sort | cut --delimiter " " --fields 1 | fzf --multi --cycle --reverse --preview "apt-cache show {1}" | xargs -r sudo apt install'
 	
 	#Systemd:
 	alias sd-all='systemctl list-units --type=service'
