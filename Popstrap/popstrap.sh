@@ -40,7 +40,9 @@ echo ' '
 flatpak install flathub org.zotero.Zotero
 echo ' '
 echo 'Capturing dotfiles...'
+git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
+cd Pop_Dots
 git clone 
 echo ' '
 echo 'Bootstrapping complete. Welcome back, Argos.'
