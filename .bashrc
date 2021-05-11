@@ -33,12 +33,13 @@
 	alias vrc='nvim ~/.vimrc'
 	alias brc='nvim ~/.bashrc'
 	alias v='nvim'
-	alias f='xdg-open "$(fzf)"; exit'
+	alias f='xdg-open "$(fzf --multi --cycle --reverse --preview "cat {1}" --preview-window=:57%:wrap:hidden --bind=ctrl-a:toggle-preview)"; exit'
 	alias t='tmux'
 	alias ws='watch sensors'
 	alias n='nnn'
 	alias c='clear'
 	alias fp='ps aux | fzf'
+	alias notes='nvim Notes/Notes.txt'
 
 	#Apt:
 	alias aptdate='sudo apt update'
@@ -56,6 +57,7 @@
 	alias sd-active='systemctl list-units --type=service --state=active'
 	alias sd-running='systemctl list-units --type=service --state=running '
 	alias sd-timer='systemctl list-timers'
+
 
 # ------Vim mode:
 	set -o vi 
