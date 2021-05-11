@@ -11,32 +11,34 @@
 	set autoread wildmode=longest,list,full
 	set mouse=a
 	set cursorline
+	set ignorecase
 	syntax on
+	set showmatch
+	runtime! debian.vim
 
+" ------Keybindings:
 
-" -------Keybindings:
+	"Enter normal mode:
+  	      imap fd <Esc>
+  	      vmap fd <Esc> 
 
-" Enter normal mode:
-	imap fd <Esc>
-	vmap fd <Esc> 
+	"Toggle Goyo: 
+  	      nmap <Space> :Goyo <CR>
+  	      
+	"Vim-like movement between splits:	
+  	      nnoremap <C-h> <C-W>h
+  	      nnoremap <C-j> <C-W>j
+  	      nnoremap <C-k> <C-W>k
+  	      nnoremap <C-l> <C-W>l  
 
-" Toggle Goyo: 
-	nmap <Space> :Goyo <CR>
-	
-" Vim-like movement between splits:	
-	nnoremap <C-h> <C-W>h
-	nnoremap <C-j> <C-W>j
-	nnoremap <C-k> <C-W>k
-	nnoremap <C-l> <C-W>l  
+	"Primary selection and clipboard copy and paste:
+  	      vnoremap <C-c> "+y
+  	      map <C-p> "+P
+  	      vnoremap <C-c> "*y :let @+=@*<CR>
 
-" Primary selection and clipboard copy and paste:
-	vnoremap <C-c> "+y
-	map <C-p> "+P
-	vnoremap <C-c> "*y :let @+=@*<CR>
-
-" Move lines when in visual mode up or down:
-	xnoremap K :move '<-2<CR>gv-gv
-	xnoremap J :move '>+1<CR>gv-gv
+	"Move lines when in visual mode up or down:
+  	      xnoremap K :move '<-2<CR>gv-gv
+  	      xnoremap J :move '>+1<CR>gv-gv
 
 
 " ------Plug-ins: 
@@ -56,22 +58,22 @@
 " ------Colorschemes:
 	
 	"Nord 
-	"	let g:nord_bold = '1'
-	"	let g:nord_italic = '1'
-	"	let g:nord_underline = '1'
-	"	let g:nord_undercurl = '1'
-	"	let g:nord_termcolor = '256'
-	"	colorscheme nord 
+		let g:nord_bold = '1'
+		let g:nord_italic = '1'
+		let g:nord_underline = '1'
+		let g:nord_undercurl = '1'
+		let g:nord_termcolor = '256'
+		colorscheme nord 
 	
 	"Monokai 
-		let g:monokai_bold = '1'
-		let g:monokai_italic = '1'
-		let g:monokai_underline = '1'
-		let g:monokai_undercurl = '1'
-		let g:monokai_termcolor = '256'
-		colorscheme monokai
+"		let g:monokai_bold = '1'
+"		let g:monokai_italic = '1'
+"		let g:monokai_underline = '1'
+"		let g:monokai_undercurl = '1'
+"		let g:monokai_termcolor = '256'
+"		colorscheme monokai
 
-	" Gruvbox
+	"Gruvbox
 "		let g:gruvbox_contrast_dark = 'hard'
 "		let g:gruvbox_bold = '1'
 "		let g:gruvbox_italic = '1'
@@ -80,19 +82,21 @@
 "		let g:gruvbox_termcolor = '256'
 "		colorscheme gruvbox 
 
-	" Airline theme:
+	"Airline theme:
 "		let g:airline_theme='base16_gruvbox_dark_hard'
 "		let g:airline_theme='base16_nord'
 "		let g:airline_theme='monochrome'
 		let g:airline_theme='base16_chalk'
+"		let g:airline_theme='bubblegum'
 
-"	Inherit terminal's current backgground:
+	" Inherit terminal's current color scheme:
 
 		hi! Normal ctermbg=NONE guibg=NONE 
 		hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 
 
 " ------Goyo config: 
+
 	function! s:goyo_enter()
 	set noshowmode
 	set noshowcmd
@@ -109,4 +113,3 @@
 
 	autocmd! User GoyoEnter nested call <SID>goyo_enter()
 	autocmd! User GoyoLeave nested call <SID>goyo_leave() 
-
