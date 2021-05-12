@@ -3,7 +3,17 @@
 <p align="center">A collection of my experiences with Linux in the form of dot files.</p><br><br>                                                                                
 Dots used on Pop!_OS.
 
-# Pop Shell
+## Table of Contents
+
+- [Pop Shell](#popshell): For those wanting to install this on their distribution
+- [Installation](#installation): For those wanting to install this on their distribution
+- [Shared Features](#shared-features): Behaviors shared between stacking and auto-tiling modes
+- [Stacking Mode](#stacking-mode): Behaviors specific to the stacking mode
+- [Auto-Tile Mode](#auto-tile-mode): Behaviors specific to the auto-tiling mode
+- [Plugins](#plugins): Details about plugins and development
+---
+
+## Pop Shell
 
 Pop Shell is a keyboard-driven layer for GNOME Shell which allows for quick and sensible navigation and management of windows. The core feature of Pop Shell is the addition of advanced tiling window management — a feature that has been highly-sought within our community. For many — ourselves included — i3wm has become the leading competitor to the GNOME desktop.
 
@@ -15,15 +25,7 @@ Therefore, we see an opportunity here to advance the usability of the GNOME desk
 
 ---
 
-## Table of Contents
 
-- [Installation](#installation): For those wanting to install this on their distribution
-- The Solution:
-  - [Shared Features](#shared-features): Behaviors shared between stacking and auto-tiling modes
-  - [Stacking Mode](#stacking-mode): Behaviors specific to the stacking mode
-  - [Auto-Tile Mode](#auto-tile-mode): Behaviors specific to the auto-tiling mode
-  - [Plugins](#plugins): Details about plugins and development
----
 
 ## Installation
 
