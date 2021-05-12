@@ -10,6 +10,7 @@ sudo apt upgrade -y
 echo ' '
 echo 'Installing commonly used packages...'
 sudo apt install -y \
+	alacritty \
 	blender \
 	default-jdk \
 	deja-dup \
@@ -21,6 +22,7 @@ sudo apt install -y \
 	gucharmap \
 	htop \
 	inkscape \
+	krita \
 	librecad \
 	libreoffice-common \
 	lm-sensors \
