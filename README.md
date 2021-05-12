@@ -166,7 +166,7 @@ Pop Shell supports extending the functionality of its launcher, and comes with s
 - [web](src/plugins/web)
 - [scripts](src/plugin_scripts.ts)
 
-> Plugin developers, see [the API documentation for the launcher API](src/plugins/README.md).
+> Plugin developers, see [the API documentation for the launcher API](https://github.com/pop-os/shell/tree/master/src/scripts).
 
 ### Scripts Plugin
 
