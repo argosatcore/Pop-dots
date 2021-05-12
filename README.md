@@ -5,7 +5,6 @@
 ## Table of Contents
 
 - [Pop Shell](#pop-shell): One of the most prominent visual assets that sets the Pop!_OS desktop apart from plain Gnome.
-- [Installation](#installation): For those wanting to install this on their distribution
 - [Shared Features](#shared-features): Behaviors shared between stacking and auto-tiling modes
 - [Stacking Mode](#stacking-mode): Behaviors specific to the stacking mode
 - [Auto-Tile Mode](#auto-tile-mode): Behaviors specific to the auto-tiling mode
@@ -22,33 +21,6 @@ Tiling window management in GNOME is virtually nonexistent, which makes the desk
 Therefore, we see an opportunity here to advance the usability of the GNOME desktop to better accomodate the needs of our community with Pop Shell. Advanced tiling window management is a must for the desktop, so we've merged i3-like tiling window management with the GNOME desktop for the best of both worlds.
 
 ![Screenshot from 2021-05-12 14-02-21](https://user-images.githubusercontent.com/64110504/118037234-ccbf0080-b32a-11eb-9573-586724fc41b3.png)
-
-
----
-
-
-
-## Installation
-
-To install this GNOME Shell extension, you MUST have the following:
-
-- GNOME Shell 3.36
-- TypeScript 3.8
-- GNU Make
-
-Proper functionality of the shell requires modifying GNOME's default keyboard shortcuts. For a local installation, run `make local-install`.
-
-If you want to uninstall the extension, you may invoke `make uninstall`, and then open the "Keyboard Shortcuts" panel in GNOME Settings to select the "Reset All.." button in the header bar.
-
-> Note that if you are packaging for your Linux distribution, many features in Pop Shell will not work out of the box because they require changes to GNOME's default keyboard shortcuts. A local install is necessary if you aren't packaging your own GNOME session with these default keyboard shortcuts unset or changed.
-
-### Packaging status
-
-- [Fedora](https://src.fedoraproject.org/rpms/gnome-shell-extension-pop-shell/): `sudo dnf install gnome-shell-extension-pop-shell` 
-- [Arch Linux](https://aur.archlinux.org/packages/?O=0&K=gnome-shell-extension-pop-shell) (Using Yay as AUR helper): 
-    - `yay -S gnome-shell-extension-pop-shell`
-    - For precompiled binary version: `yay -S gnome-shell-extension-pop-shell-bin`
-    - For GitHub repository version: `yay -S gnome-shell-extension-pop-shell-git`
 
 ---
 
