@@ -57,6 +57,8 @@ mv .git ~/
 sudo mv .vim/ ~/
 mv .tmux.conf ~/
 mv .Xdefaults ~/
+mv .profile ~/
+mv .bash_logout ~/
 sudo mv .vimrc ~/
 sudo mv .bashrc ~/
 cd
