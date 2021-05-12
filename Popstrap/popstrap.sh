@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#REMEMBER: This script must be run from the home directory, otherwise setting up the dotfiles will fail.
 #Bootstrapping script for Debian-based systems:
 echo 'Initializing bootstrap'
 echo ' '
@@ -35,6 +35,9 @@ sudo apt install -y \
 	vim-gtk \
 	vlc \
 	youtube-dl
+echo ' '
+echo 'Package installation complete.'
+echo ' '
 echo 'Installing Zotero...'
 echo ' ' 
 flatpak install flathub org.zotero.Zotero
@@ -43,6 +46,17 @@ echo 'Capturing dotfiles...'
 git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
 cd Pop_Dots
-git clone 
+cd .config
+sudo mv mimeapps.list ~/.config
+mv alacritty / ~/.comfig
+cd ..
+mv README.md ~/
+mv .git ~/
+sudo mv .vim/ ~/
+mv .tmux.conf ~/
+mv .Xdefaults ~/
+sudo mv .vimrc ~/
+sudo mv .bashrc ~/
+rm -rf Pop_Dots/ 
 echo ' '
 echo 'Bootstrapping complete. Welcome back, Argos.'
