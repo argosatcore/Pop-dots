@@ -5,7 +5,7 @@ Dots used on Pop!_OS.
 
 ## Table of Contents
 
-- [Pop Shell](#popshell): For those wanting to install this on their distribution
+- [Pop Shell](#pop-shell): One of the most prominent visual assets that sets the Pop!_OS desktop apart from plain Gnome.
 - [Installation](#installation): For those wanting to install this on their distribution
 - [Shared Features](#shared-features): Behaviors shared between stacking and auto-tiling modes
 - [Stacking Mode](#stacking-mode): Behaviors specific to the stacking mode
