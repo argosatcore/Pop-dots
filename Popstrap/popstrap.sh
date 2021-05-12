@@ -57,6 +57,7 @@ mv .tmux.conf ~/
 mv .Xdefaults ~/
 sudo mv .vimrc ~/
 sudo mv .bashrc ~/
+cd
 rm -rf Pop_Dots/ 
 echo ' '
 echo 'Bootstrapping complete. Welcome back, Argos.'
