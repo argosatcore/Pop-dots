@@ -21,7 +21,8 @@ Tiling window management in GNOME is virtually nonexistent, which makes the desk
 
 Therefore, we see an opportunity here to advance the usability of the GNOME desktop to better accomodate the needs of our community with Pop Shell. Advanced tiling window management is a must for the desktop, so we've merged i3-like tiling window management with the GNOME desktop for the best of both worlds.
 
-[![](./screenshot.webp)](https://raw.githubusercontent.com/pop-os/shell/master/screenshot.webp)
+![Screenshot from 2021-05-12 14-02-21](https://user-images.githubusercontent.com/64110504/118037234-ccbf0080-b32a-11eb-9573-586724fc41b3.png)
+
 
 ---
 
