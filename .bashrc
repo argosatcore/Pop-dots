@@ -20,6 +20,7 @@
 	#General use:
 	alias ll='ls -alF'
 	alias la='ls -A'
+	alias li='ls -lih'
 	alias l='ls -CF'
 	alias c='clear'
 	alias rm='rm -I'
@@ -29,8 +30,16 @@
 	alias v='nvim'
 	alias t='tmux'
 	alias n='nnn'
+	alias rec='wf-recorder'
 	alias vrc='nvim ~/.vimrc'
 	alias brc='nvim ~/.bashrc'
+	alias wrcss='nvim .config/waybar/style.css'
+	alias wrc='nvim .config/waybar/config'
+	alias src='nvim ~/.config/sway/config'
+	alias vrc='nvim ~/.vimrc'
+	alias brc='nvim ~/.bashrc'
+	alias irc='nvim ~/.inputrc'
+	alias prc='nvim ~/.profile'
 	alias v='nvim'
 	alias f='xdg-open "$(fzf --multi --cycle --reverse --preview "cat {1}" --preview-window=:57%:wrap:hidden --bind=ctrl-a:toggle-preview)"; exit'
 	alias t='tmux'
@@ -70,8 +79,11 @@
 	bind -m vi-insert "\C-k":kill-line
 
 
-# ------Turn off bell
-	set bell-style none
+# ------Functions:
+	mkcd() {
+	    mkdir "$1"
+	    cd "$1"
+	}
 
 
 # ------NNN's environmental variables:
