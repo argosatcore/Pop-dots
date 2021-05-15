@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [Pop Shell](#pop-shell): One of the most prominent visual assets that sets the Pop!_OS desktop apart from plain Gnome.
+- [Pop Shell](#pop-shell): To me, Pop's most prominent asset; one which has made the Gnome desktop a very versatile Linux DE.
 - [Shared Features](#shared-features): Behaviors shared between stacking and auto-tiling modes
 - [Stacking Mode](#stacking-mode): Behaviors specific to the stacking mode
 - [Auto-Tile Mode](#auto-tile-mode): Behaviors specific to the auto-tiling mode
