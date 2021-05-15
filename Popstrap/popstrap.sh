@@ -34,6 +34,7 @@ sudo apt install -y \
 	scribus \
 	tmux \
 	texlive-full \
+	toilet \
 	vim-gtk \
 	vlc \
 	youtube-dl
@@ -55,12 +56,7 @@ cd ..
 mv README.md ~/
 mv .git ~/
 sudo mv .vim/ ~/
-mv .tmux.conf ~/
-mv .Xdefaults ~/
-mv .profile ~/
-mv .bash_logout ~/
-sudo mv .vimrc ~/
-sudo mv .bashrc ~/
+sudo mv .* ~/
 cd
 rm -rf Pop_Dots/ 
 echo ' '

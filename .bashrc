@@ -1,70 +1,14 @@
-# ░█▀▄░█▀█░█▀▀░█░█
-# ░█▀▄░█▀█░▀▀█░█▀█
-# ░▀▀░░▀░▀░▀▀▀░▀░▀
+#░█▀▄░█▀█░█▀▀░█░█░█▀▄░█▀▀
+#░█▀▄░█▀█░▀▀█░█▀█░█▀▄░█░░
+#░▀▀░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀
 
-
-# ------Environmental Variables:
-	export EDITOR="nvim"
-	export PAGER="less"
-	export MANPAGER='nvim +Man!'
-	export BROWSER="firefox"
-	export TERM="xterm-256color"
-	export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/sbin
+# ------Shopt variables:
+	#shopt -s globstar
+	shopt -s checkwinsize
+	shopt -s histappend
 	shopt -s cdspell
 	shopt -s autocd
 	complete -d cd
-
-
-# ------Handy aliases:
-	
-	#General use:
-	alias ll='ls -alF'
-	alias la='ls -A'
-	alias li='ls -lih'
-	alias l='ls -CF'
-	alias c='clear'
-	alias rm='rm -I'
-	alias poweroff='systemctl poweroff'
-	alias reboot='systemctl reboot'
-	alias suspend='systemctl suspend'
-	alias v='nvim'
-	alias t='tmux'
-	alias n='nnn'
-	alias rec='wf-recorder'
-	alias vrc='nvim ~/.vimrc'
-	alias brc='nvim ~/.bashrc'
-	alias wrcss='nvim .config/waybar/style.css'
-	alias wrc='nvim .config/waybar/config'
-	alias src='nvim ~/.config/sway/config'
-	alias vrc='nvim ~/.vimrc'
-	alias brc='nvim ~/.bashrc'
-	alias irc='nvim ~/.inputrc'
-	alias prc='nvim ~/.profile'
-	alias v='nvim'
-	alias f='xdg-open "$(fzf --multi --cycle --reverse --preview "cat {1}" --preview-window=:57%:wrap:hidden --bind=ctrl-a:toggle-preview)"; exit'
-	alias t='tmux'
-	alias ws='watch sensors'
-	alias n='nnn'
-	alias c='clear'
-	alias fp='ps aux | fzf'
-	alias notes='nvim Notes/Notes.txt'
-
-	#Apt:
-	alias aptdate='sudo apt update'
-	alias aptgradable='apt list --upgradable'
-	alias aptgrade='sudo apt upgrade'
-	alias lookapt='apt search'
-	alias throwapt='sudo apt remove'
-	alias capture='sudo apt install'
-	alias debcount='apt-cache search "" | wc -l'
-	alias debcrawler='apt-cache pkgnames | fzf --multi --cycle --reverse --preview "apt-cache show {1}" --preview-window=:57%:wrap:hidden --bind=space:toggle-preview | xargs -ro sudo apt install'
-	alias debxile='apt list --installed | sort | cut --delimiter " " --fields 1 | fzf --multi --cycle --reverse | xargs -o sudo apt remove'
-
-	#Systemd:
-	alias sd-all='systemctl list-units --type=service'
-	alias sd-active='systemctl list-units --type=service --state=active'
-	alias sd-running='systemctl list-units --type=service --state=running '
-	alias sd-timer='systemctl list-timers'
 
 
 # ------Vim mode:
@@ -86,24 +30,6 @@
 	}
 
 
-# ------NNN's environmental variables:
-
-	#Texteditor:
-	export NNN_USE_EDITOR=1
-
-	#Bookmarks:
-	export NNN_BMS='p:~/Documents/;d:~/Downloads/;i:~/Pictures/'
-
-	#Plugins:
-	export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:dragdrop;t:nmount;v:preview-tui;z:fzcd'
-	
-	#Archive:
-	export NNN_ARCHIVE="\\.(7z|bz2|gz|tar|tgz|zip)$"
-	
-	#Trash:
-	export NNN_TRASH=1
-
-
 # ------If not running interactively, don't do anything
 	case $- in
 	    *i*) ;;
@@ -116,23 +42,9 @@
 	HISTCONTROL=ignoreboth
 
 
-# ------Append to the history file, don't overwrite it
-	shopt -s histappend
-
-
 # ------For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 	HISTSIZE=1000
 	HISTFILESIZE=2000
-
-
-# ------Check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-	shopt -s checkwinsize
-
-
-# ------If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-	#shopt -s globstar
 
 
 # ------Make less more friendly for non-text input files, see lesspipe(1)
@@ -207,22 +119,17 @@
 
 
 # ------Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+	#sleep 10; alert
 	alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 
-# ------Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# ------Alias definitions:
 	if [ -f ~/.bash_aliases ]; then
     	. ~/.bash_aliases
 	fi
 
 
-# ------Enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# ------Enable programmable completion features: 
 	if ! shopt -oq posix; then
 	  if [ -f /usr/share/bash-completion/bash_completion ]; then
 	    . /usr/share/bash-completion/bash_completion
