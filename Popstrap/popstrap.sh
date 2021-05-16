@@ -1,5 +1,4 @@
 #!/bin/sh
-#REMEMBER: This script must be run from the home directory, otherwise setting up the dotfiles will fail.
 #Bootstrapping script for Debian-based systems:
 echo 'Initializing bootstrap'
 echo ' '
@@ -48,16 +47,19 @@ echo ' '
 echo 'Capturing dotfiles...'
 git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
-cd Pop_Dots
-cd .config
-sudo mv mimeapps.list ~/.config
-mv alacritty / ~/.comfig
-cd ..
-mv README.md ~/
-mv .git ~/
-sudo mv .vim/ ~/
-sudo mv .* ~/
-cd
+mv ~/Pop_Dots/.config/alacritty/ ~/.config
+mv ~/Pop_Dots/README.md ~/
+mv ~/Pop_Dots/LICENSE ~/
+mv ~/Pop_Dots/Popstrap/ ~/
+mv ~/Pop_Dots/.git ~/
+sudo mv ~/Pop_Dots/.vim/ ~/
+sudo mv ~/Pop_Dots/.bash* ~/
+sudo mv ~/Pop_Dots/.profile ~/
+sudo mv ~/Pop_Dots/.vimrc ~/
+sudo mv ~/Pop_Dots/config/mimeapps.list ~/.config
+mv ~/Pop_Dots/.tmux.conf ~/
+mv ~/Pop_Dots/.inputrc ~/
+mv ~/Pop_Dots/.Xdefaults ~/
 rm -rf Pop_Dots/ 
 echo ' '
 echo 'Bootstrapping complete. Welcome back, Argos.'
