@@ -11,10 +11,9 @@
 # ------Environmental Variables:
 	export EDITOR="nvim"
 	export PAGER="less"
-	export MANPAGER='nvim +Man!'
+	export MANPAGER="nvim +Man!"
 	export BROWSER="firefox"
 	export TERM="xterm-256color"
-	export PATH=$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/sbin
 
 
 # ------NNN's environmental variables:
