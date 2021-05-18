@@ -37,6 +37,7 @@
 	alias configheader='toilet -f pagga'
 	alias fp='ps aux | fzf'
 	alias notes='nvim Notes/Notes.txt'
+	alias impose='pdfbook2 --paper=letter --outer-margin=0 --inner-margin=0 --top-margin=0 --bottom-margin=0 -n'
 
 	#Apt:
 	alias aptdate='sudo apt update'
