@@ -35,6 +35,7 @@ sudo apt install -y \
 	tmux \
 	texlive-full \
 	toilet \
+	tree \
 	vim-gtk \
 	vlc \
 	youtube-dl
