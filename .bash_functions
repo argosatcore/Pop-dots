@@ -12,7 +12,8 @@
 
 # ------Use fzf as a file opener:
 	fo() {
-	xdg-open "$(fzf --multi --cycle --reverse --preview "cat {1}" --preview-window=:57%:wrap:hidden --bind=ctrl-a:toggle-preview)"; exit	
+	fdfind -t f -H -I | fzf -m --preview="xdg-mime query default {}" | xargs -ro -d "\n" xdg-open 2>&-  
+	exit
 	}
 
 
@@ -22,7 +23,7 @@
 	}
 
 
-# ------Give Debian fuzzy-like package management abilities:
+# ------Give Apt fuzzy-like package management abilities:
 	debcrawler() {
 	sudo apt update && sudo apt install $(apt-cache pkgnames | fzf --multi --cycle --reverse --preview "apt-cache show {1}" --preview-window=:57%:wrap:hidden --bind=space:toggle-preview)
 	}
