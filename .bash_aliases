@@ -24,11 +24,11 @@
 	alias prc='nvim ~/.profile'
 	alias irc='nvim ~/.inputrc'
 	alias barc='nvim ~/.bash_aliases'
+	alias frc='nvim ~/.bash_functions'
 	alias wrcss='nvim .config/waybar/style.css'
 	alias wrc='nvim .config/waybar/config'
 	alias src='nvim ~/.config/sway/config'
 	alias v='nvim'
-	alias f='xdg-open "$(fzf --multi --cycle --reverse --preview "cat {1}" --preview-window=:57%:wrap:hidden --bind=ctrl-a:toggle-preview)"; exit'
 	alias t='tmux'
 	alias ws='watch sensors'
 	alias n='nnn'
@@ -47,12 +47,11 @@
 	alias throwapt='sudo apt remove'
 	alias capture='sudo apt install'
 	alias debcount='apt-cache search "" | wc -l'
-	alias debcrawler='apt-cache pkgnames | fzf --multi --cycle --reverse --preview "apt-cache show {1}" --preview-window=:57%:wrap:hidden --bind=space:toggle-preview | xargs -ro sudo apt install' 
-	alias debexile='apt-cache pkgnames | fzf --multi --cycle --reverse --preview "apt-cache show {1}" --preview-window=:57%:wrap:hidden --bind=space:toggle-preview | xargs -ro sudo apt remove' 
 
 
 	#Systemd:
 	alias sd-all='systemctl list-units --type=service'
+	alias sd-files='systemctl list-unit-files --type=service'
 	alias sd-active='systemctl list-units --type=service --state=active'
 	alias sd-running='systemctl list-units --type=service --state=running '
 	alias sd-timer='systemctl list-timers'

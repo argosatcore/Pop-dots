@@ -129,6 +129,12 @@
 	fi
 
 
+# ------Functions definitions:
+	if [ -f "".bash_functions ]; then
+    	. ~/.bash_functions
+	fi
+
+
 # ------Enable programmable completion features: 
 	if ! shopt -oq posix; then
 	  if [ -f /usr/share/bash-completion/bash_completion ]; then
