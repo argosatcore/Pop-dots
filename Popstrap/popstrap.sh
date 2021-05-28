@@ -13,6 +13,7 @@ sudo apt install -y \
 	blender \
 	default-jdk \
 	deja-dup \
+	fd-find \
 	ffmpeg \
 	fzf \
 	gimp \
