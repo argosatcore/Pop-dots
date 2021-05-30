@@ -62,5 +62,6 @@
 	alias gpull='git pull'
 	alias gpush='git push -u'
 	alias gadd='git add -u'
+	alias gcom='git commit -m'
 
 
