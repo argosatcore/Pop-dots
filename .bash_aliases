@@ -45,7 +45,6 @@
 	alias aptdate='sudo apt update'
 	alias aptgradable='apt list --upgradable'
 	alias aptgrade='sudo apt upgrade'
-	alias lookapt='apt search'
 	alias throwapt='sudo apt remove'
 	alias capture='sudo apt install'
 	alias debcount='apt-cache search "" | wc -l'
