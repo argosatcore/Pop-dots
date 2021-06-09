@@ -50,6 +50,7 @@ echo 'Capturing dotfiles...'
 git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
 mv ~/Pop_Dots/.config/alacritty/ ~/.config
+mv ~/Pop_Dots/.config/nvim/ ~/.config
 mv ~/Pop_Dots/README.md ~/
 mv ~/Pop_Dots/LICENSE ~/
 mv ~/Pop_Dots/Popstrap/ ~/
