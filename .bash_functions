@@ -10,6 +10,13 @@
 	}
 
 
+# ------Pull up quick notes on random topics:
+ 	note() {
+ 		touch ~/Desktop/Notes/"$1"
+		nvim ~/Desktop/Notes/"$1"
+ 	}
+
+
 # ------Use fzf as a file opener:
 	fo() {
 		file="$(fdfind -t f -H | fzf --reverse --preview="head -$LINES {}" --bind="space:toggle-preview" --preview-window=wrap:hidden)"
