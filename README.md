@@ -18,7 +18,7 @@ Pop Shell is a keyboard-driven layer for GNOME Shell which allows for quick and 
 
 Tiling window management in GNOME is virtually nonexistent, which makes the desktop awkward to interact with when your needs exceed that of two windows at a given time. Luckily, GNOME Shell is an extensible desktop with the foundations that make it possible to implement a tiling window manager on top of the desktop
 
-![Screenshot from 2021-05-12 14-02-21](https://user-images.githubusercontent.com/64110504/118037234-ccbf0080-b32a-11eb-9573-586724fc41b3.png)
+![Screenshot from 2021-05-12 14-02-21](https://user-images.githubusercontent.com/64110504/121616004-4bd55080-ca1f-11eb-95b8-28a15bfc759a.png)
 
 ---
 
