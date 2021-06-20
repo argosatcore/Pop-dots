@@ -29,7 +29,6 @@ sudo apt install -y \
 	lollypop \
 	neofetch \
 	neovim \
-	nnn \
 	pavucontrol \
 	scribus \
 	tmux \
