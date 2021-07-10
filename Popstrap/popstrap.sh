@@ -45,6 +45,9 @@ echo 'Installing Zotero...'
 echo ' ' 
 flatpak install flathub org.zotero.Zotero
 echo ' '
+echo 'Installing Foliate...'
+flatpak install flathub com.github.johnfactotum.Foliate
+echo ' '
 echo 'Capturing dotfiles...'
 git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
@@ -54,11 +57,11 @@ mv ~/Pop_Dots/README.md ~/
 mv ~/Pop_Dots/LICENSE ~/
 mv ~/Pop_Dots/Popstrap/ ~/
 mv ~/Pop_Dots/.git ~/
-sudo mv ~/Pop_Dots/.vim/ ~/
-sudo mv ~/Pop_Dots/.bash* ~/
-sudo mv ~/Pop_Dots/.profile ~/
-sudo mv ~/Pop_Dots/.vimrc ~/
-sudo mv ~/Pop_Dots/config/mimeapps.list ~/.config
+mv -f ~/Pop_Dots/.vim/ ~/
+mv -f ~/Pop_Dots/.bash* ~/
+mv -f ~/Pop_Dots/.profile ~/
+mv -f ~/Pop_Dots/.vimrc ~/
+mv -f ~/Pop_Dots/config/mimeapps.list ~/.config
 mv ~/Pop_Dots/.tmux.conf ~/
 mv ~/Pop_Dots/.inputrc ~/
 mv ~/Pop_Dots/.Xdefaults ~/

@@ -35,7 +35,6 @@
 	alias ws='watch sensors'
 	alias n='nnn'
 	alias c='clear'
-	alias colorp='grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-'
 	alias configheader='toilet -f pagga'
 	alias fp='ps aux | fzf'
 	alias impose='pdfbook2 --paper=letter --outer-margin=0 --inner-margin=0 --top-margin=0 --bottom-margin=0 -n'
