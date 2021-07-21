@@ -24,7 +24,7 @@ sudo apt install -y \
 	inkscape \
 	krita \
 	librecad \
-	libreoffice-common \
+	libreoffice-java-common \
 	lm-sensors \
 	lollypop \
 	neofetch \
