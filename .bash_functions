@@ -64,4 +64,9 @@
 	}
 
 
-
+# ------Update Pop_Dots:
+	popgit() {
+		git add -u
+		git commit -m "$1"
+		git push -u
+	}
