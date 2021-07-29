@@ -1,0 +1,26 @@
+{
+  "float": [
+    {
+      "class": "pop-shell-example",
+      "title": "pop-shell-example"
+    },
+    {
+      "class": "Eog"
+    },
+    {
+      "class": "Gnome-extensions-app"
+    },
+    {
+      "class": "Org.gnome.Nautilus"
+    },
+    {
+      "class": "Gnome-tweaks"
+    },
+    {
+      "class": "Gnome-calculator"
+    }
+  ],
+  "log_on_focus": false,
+  "move_pointer_on_switch": false,
+  "default_pointer_position": "TOP_LEFT"
+}
