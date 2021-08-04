@@ -10,31 +10,42 @@
 	}
 
 
-# ------Pull up quick notes on random topics:
- 	note() {
+# ------Create quick notes on random topics:
+ 	jot() {
  		touch ~/Desktop/Notes/"$1"
 		nvim ~/Desktop/Notes/"$1"
  	}
+
+
+# ------Browse and open notes quickly:
+	fjot() {
+		cd ~/Desktop/Notes/
+		note="$(fdfind -t f -H | fzf --reverse --preview="head -$LINES {}" --bind="space:toggle-preview" --preview-window=wrap:hidden)"
+			if [ -n "$note" ]; then	
+			nvim "$note"
+			fi
+		cd
+	}
 
 
 # ------Use fzf as a file opener:
 	fo() {
 		file="$(fdfind -t f -H | fzf --reverse --preview="head -$LINES {}" --bind="space:toggle-preview" --preview-window=wrap:hidden)"
 		if [ -n "$file" ]; then
-		    mimetype="$(xdg-mime query filetype $file)"
-		    default="$(xdg-mime query default $mimetype)"
-		    if [[ "$default" == "nvim.desktop" ]]; then
-		        nvim "$file"
-		    else
-		        &>/dev/null xdg-open "$file" & disown; exit
-		    fi
+			mimetype="$(xdg-mime query filetype $file)"
+			default="$(xdg-mime query default $mimetype)"
+		    		if [[ "$default" == "nvim.desktop" ]]; then
+		        		nvim "$file"
+		    		else
+		        		&>/dev/null xdg-open "$file" & disown; exit
+		    		fi
 		fi
 	}
 
 
-# ------Use fzf to move between directories
+# ------Use fzf to move between directories:
 	fd() {
-		cd && cd "$(fdfind -t d -H | fzf --cycle --reverse --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=90%:wrap:hidden)" && clear
+		cd "$(fdfind -t d -H | fzf --cycle --reverse --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=wrap:hidden)" && clear
 	}
 
 
@@ -54,7 +65,7 @@
 	debclean() {
 		sudo apt clean
 		sudo apt autoclean
-		sudo apt autoremove
+		sudo apt autoremove --purge 
 	}
 
 
@@ -64,8 +75,8 @@
 	}
 
 
-# ------Update Pop_Dots:
-	popgit() {
+# ------Update Deb_Dots:
+	debgit() {
 		git add -u
 		git commit -m "$1"
 		git push -u

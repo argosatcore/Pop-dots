@@ -1,5 +1,8 @@
 #!/bin/sh
 #Bootstrapping script for Debian-based systems:
+set -e
+
+initialize() {
 echo 'Initializing bootstrap'
 echo ' '
 echo 'Updating system...'
@@ -7,6 +10,9 @@ echo ' '
 sudo apt update && \
 sudo apt upgrade -y
 echo ' '
+}
+
+install() {
 echo 'Installing commonly used packages...'
 sudo apt install -y \
 	alacritty \
@@ -39,8 +45,9 @@ sudo apt install -y \
 	vlc \
 	youtube-dl
 echo ' '
-echo 'Package installation complete.'
-echo ' '
+}
+
+flatpaks() {
 echo 'Installing Zotero...'
 echo ' ' 
 flatpak install flathub org.zotero.Zotero
@@ -48,6 +55,9 @@ echo ' '
 echo 'Installing Foliate...'
 flatpak install flathub com.github.johnfactotum.Foliate
 echo ' '
+}
+
+dots() {
 echo 'Capturing dotfiles...'
 git clone git@github.com:argosatcore/Pop_Dots.git
 echo ' '
@@ -65,4 +75,14 @@ mv ~/Pop_Dots/.inputrc ~/
 mv ~/Pop_Dots/.Xdefaults ~/
 rm -rf Pop_Dots/ 
 echo ' '
+}
+
+end() {
 echo 'Bootstrapping complete. Welcome back, Argos.'
+}
+
+initialize
+install
+flatpaks
+dots
+end
