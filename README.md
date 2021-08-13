@@ -1,6 +1,4 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/64110504/117901326-54076800-b288-11eb-9735-5ec61bc1b0b1.png" width="275px"></p>
 <h1 align="center">Argos's Pop!_Dots Files</h1> 
-<p align="center">A collection of my experiences with Linux in the form of dot files.</p><br><br>                                                                                
-I've been using this distribution in tandem with my Debian machines, and, apart from Debian, it is the only distribution so far that has matched my expectations of what a Linux distribution should deliver. A great stable amalgam comprised of discrete Debian components with an Ubuntu base and their own <a href="https://github.com/orgs/pop-os/repositories?language=rust">rusty</a> sauce. Whether a novice or an experienced user, this won't dissapoint. 
-
-
+<p align="center">A collection of my experiences with Linux in the form of dot files.</p><br><br>                                                                               
+I have been using this distro in tandem with my Debian machines and, other than Debian, it is the only distro so far that has met my expectations of what a Linux distro should offer. A great, stable amalgam made up of discrete Debian components with an Ubuntu base and its own <a href="https://github.com/orgs/pop-os/repositories?language=rust">rusty</a> sauce. Whether you are a beginner or an experienced user, you will not be disappointed. 
